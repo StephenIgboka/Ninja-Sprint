@@ -1,0 +1,280 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 238,
+    "major": 5,
+    "minor": 5,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "antialiasingMode": "MSAA",
+    "antialisingEnabledOnMobile": false,
+    "folderProject": true,
+    "orientation": "landscape",
+    "packageName": "com.example.gamename",
+    "pixelsRounding": true,
+    "projectUuid": "4634af2a-c0f6-469d-abe9-e0630b925b72",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "",
+    "templateSlug": "",
+    "version": "1.0.0",
+    "name": "Ninja Sprint",
+    "description": "",
+    "author": "",
+    "windowWidth": 800,
+    "windowHeight": 600,
+    "latestCompilationDirectory": "",
+    "maxFPS": 60,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {
+      "android-icon-144": "",
+      "android-icon-192": "",
+      "android-icon-36": "",
+      "android-icon-48": "",
+      "android-icon-72": "",
+      "android-icon-96": "",
+      "android-windowSplashScreenAnimatedIcon": "",
+      "desktop-icon-512": "",
+      "ios-icon-100": "",
+      "ios-icon-1024": "",
+      "ios-icon-114": "",
+      "ios-icon-120": "",
+      "ios-icon-144": "",
+      "ios-icon-152": "",
+      "ios-icon-167": "",
+      "ios-icon-180": "",
+      "ios-icon-20": "",
+      "ios-icon-29": "",
+      "ios-icon-40": "",
+      "ios-icon-50": "",
+      "ios-icon-57": "",
+      "ios-icon-58": "",
+      "ios-icon-60": "",
+      "ios-icon-72": "",
+      "ios-icon-76": "",
+      "ios-icon-80": "",
+      "ios-icon-87": ""
+    },
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": true
+    },
+    "authorIds": [],
+    "authorUsernames": [],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "file": "assets/ninja_sprint_1.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint_1",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_sprint_2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint_2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_sprint.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_sprint2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_sprint3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/PressStart2P-Regular.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "PressStart2P-Regular.ttf",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Open Font License/44904f17cd5efc06565a08838d627234cda763a6406798f0cbbdf1cf60c676b3_PressStart2P-Regular.ttf",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/ninja_sprint4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_sprint4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_jump.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_jump",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_jump2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_jump2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_jump3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_jump3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_roll.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_roll",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_roll2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_roll2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_roll3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_roll3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shrub_1.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "shrub_1",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shrub_2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "shrub_2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/game"
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/repeateveryxseconds"
+    }
+  ],
+  "externalLayouts": []
+}
