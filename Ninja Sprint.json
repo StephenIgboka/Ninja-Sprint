@@ -14,7 +14,7 @@
     "orientation": "landscape",
     "packageName": "com.example.gamename",
     "pixelsRounding": true,
-    "projectUuid": "4634af2a-c0f6-469d-abe9-e0630b925b72",
+    "projectUuid": "cd842afa-3f32-46e3-9fec-8aa44a914f5d",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "templateSlug": "",
@@ -92,7 +92,7 @@
   "resources": {
     "resources": [
       {
-        "file": "assets/ninja_sprint_1.png",
+        "file": "assets/ninja_sprint_3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint_1",
@@ -100,7 +100,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_sprint_2.png",
+        "file": "assets/ninja_sprint_4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint_2",
@@ -108,7 +108,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite.png",
+        "file": "assets/NewSprite6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite",
@@ -116,7 +116,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_sprint.png",
+        "file": "assets/ninja_sprint5.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint",
@@ -124,7 +124,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_sprint2.png",
+        "file": "assets/ninja_sprint6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint2",
@@ -132,7 +132,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_sprint3.png",
+        "file": "assets/ninja_sprint7.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint3",
@@ -140,7 +140,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/PressStart2P-Regular.ttf",
+        "file": "assets/PressStart2P-Regular2.ttf",
         "kind": "font",
         "metadata": "",
         "name": "PressStart2P-Regular.ttf",
@@ -151,7 +151,7 @@
         }
       },
       {
-        "file": "assets/ninja_sprint4.png",
+        "file": "assets/ninja_sprint8.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_sprint4",
@@ -159,7 +159,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_jump.png",
+        "file": "assets/ninja_jump4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_jump",
@@ -167,7 +167,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_jump2.png",
+        "file": "assets/ninja_jump5.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_jump2",
@@ -175,7 +175,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_jump3.png",
+        "file": "assets/ninja_jump6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_jump3",
@@ -183,7 +183,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_roll.png",
+        "file": "assets/ninja_roll4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_roll",
@@ -191,7 +191,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_roll2.png",
+        "file": "assets/ninja_roll5.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_roll2",
@@ -199,7 +199,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/ninja_roll3.png",
+        "file": "assets/ninja_roll6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "ninja_roll3",
@@ -207,7 +207,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/shrub_1.png",
+        "file": "assets/shrub_3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "shrub_1",
@@ -215,15 +215,15 @@
         "userAdded": false
       },
       {
-        "file": "assets/shrub_2.png",
+        "file": "assets/shrub_4.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/shrub_4.png\"}",
         "name": "shrub_2",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite2.png",
+        "file": "assets/NewSprite7.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite2",
@@ -231,26 +231,50 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite3.png",
+        "file": "assets/NewSprite8.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite8.png\"}",
         "name": "NewSprite3",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite4.png",
+        "file": "assets/NewSprite9.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite9.png\"}",
         "name": "NewSprite4",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite5.png",
+        "file": "assets/NewSprite10.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shrub_5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "shrub_3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/shrub_6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "shrub_4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/ninja_jump7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "ninja_jump4",
         "smoothed": false,
         "userAdded": false
       }

@@ -148,6 +148,7 @@
       "effects": [],
       "behaviors": [
         {
+          "jumpSpeed": 950,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 1500,
@@ -157,7 +158,6 @@
           "deceleration": 1500,
           "gravity": 1300,
           "ignoreDefaultControls": false,
-          "jumpSpeed": 1000,
           "jumpSustainTime": 0,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 784,
@@ -423,7 +423,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "ninja_jump3",
+                  "image": "ninja_jump4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -653,19 +653,19 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 2,
-                        "y": 32
+                        "x": 10,
+                        "y": 45
                       },
                       {
-                        "x": 58,
-                        "y": 32
+                        "x": 59,
+                        "y": 45
                       },
                       {
-                        "x": 58,
+                        "x": 59,
                         "y": 64
                       },
                       {
-                        "x": 2,
+                        "x": 10,
                         "y": 64
                       }
                     ]
@@ -698,7 +698,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "NewSprite2",
+                  "image": "shrub_4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -714,19 +714,19 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 24
+                        "x": 8,
+                        "y": 10
                       },
                       {
-                        "x": 62,
-                        "y": 24
+                        "x": 48,
+                        "y": 10
                       },
                       {
-                        "x": 62,
+                        "x": 48,
                         "y": 64
                       },
                       {
-                        "x": 0,
+                        "x": 8,
                         "y": 64
                       }
                     ]
@@ -749,7 +749,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "NewSprite",
+          "name": "shrub_3",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -810,7 +810,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "NewSprite",
+          "name": "kunai",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1245,7 +1245,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "RNG Loop (Obstacles)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1273,7 +1272,7 @@
               "parameters": [
                 "obstacleRNG",
                 "=",
-                "RandomInRange(0, 6)"
+                "RandomInRange(0, 2)"
               ]
             },
             {
@@ -1317,7 +1316,7 @@
                     "",
                     "shrub_1",
                     "SpawnPoint.X()",
-                    "419",
+                    "422",
                     ""
                   ]
                 },
@@ -1344,7 +1343,7 @@
                   "parameters": [
                     "obstacleRNG",
                     "=",
-                    "0"
+                    "1"
                   ]
                 },
                 {
@@ -1361,9 +1360,9 @@
                   },
                   "parameters": [
                     "",
-                    "shrub_1",
+                    "shrub_2",
                     "SpawnPoint.X()",
-                    "419",
+                    "425",
                     ""
                   ]
                 },
@@ -1409,7 +1408,7 @@
                     "",
                     "shrub_3",
                     "SpawnPoint.X()",
-                    "419",
+                    "422",
                     ""
                   ]
                 },
