@@ -118,7 +118,7 @@
       {
         "file": "assets/ninja_sprint5.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_sprint5.png\"}",
         "name": "ninja_sprint",
         "smoothed": false,
         "userAdded": false
@@ -126,7 +126,7 @@
       {
         "file": "assets/ninja_sprint6.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_sprint6.png\"}",
         "name": "ninja_sprint2",
         "smoothed": false,
         "userAdded": false
@@ -134,7 +134,7 @@
       {
         "file": "assets/ninja_sprint7.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_sprint7.png\"}",
         "name": "ninja_sprint3",
         "smoothed": false,
         "userAdded": false
@@ -185,7 +185,7 @@
       {
         "file": "assets/ninja_roll4.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_roll4.png\"}",
         "name": "ninja_roll",
         "smoothed": false,
         "userAdded": false
@@ -193,7 +193,7 @@
       {
         "file": "assets/ninja_roll5.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_roll5.png\"}",
         "name": "ninja_roll2",
         "smoothed": false,
         "userAdded": false
@@ -201,7 +201,7 @@
       {
         "file": "assets/ninja_roll6.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_roll6.png\"}",
         "name": "ninja_roll3",
         "smoothed": false,
         "userAdded": false
@@ -277,6 +277,14 @@
         "name": "ninja_jump4",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/ninja_dead.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/ninja_dead.png\"}",
+        "name": "ninja_dead",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -290,7 +298,7 @@
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/game"
+      "referenceTo": "/layouts/ninja_sprint"
     }
   ],
   "externalEvents": [],

@@ -1,8 +1,8 @@
 {
   "b": 114,
   "disableInputWhenNotFocused": true,
-  "mangledName": "game",
-  "name": "game",
+  "mangledName": "ninja_95sprint",
+  "name": "ninja_sprint",
   "r": 71,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.49508400737488945,
+    "zoomFactor": 0.689778214010451,
     "windowMask": false
   },
   "objectsGroups": [
@@ -50,6 +50,41 @@
       "name": "spawnRate",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "isDead",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "objectSpeed",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "name": "restart",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "score",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "scrollSpeed",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "name": "speedUp",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "name": "highScore",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -135,11 +170,59 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "OnesPlace",
+      "persistentUuid": "83e94942-7eb4-4ca1-98f6-e33833a9eb18",
+      "width": 0,
+      "x": 749,
+      "y": 40,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "HighScore",
+      "persistentUuid": "76f658a7-aa18-4fd8-90e5-baedc3099dd8",
+      "width": 0,
+      "x": 726,
+      "y": 70,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "highscore_text",
+      "persistentUuid": "ef552e1e-d099-4ff6-9c46-26807eec0da9",
+      "width": 0,
+      "x": 680,
+      "y": 70,
+      "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Player",
       "type": "Sprite",
@@ -148,9 +231,9 @@
       "effects": [],
       "behaviors": [
         {
-          "jumpSpeed": 950,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 950,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -197,19 +280,19 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 9.5,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 57,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 57,
+                        "y": 53.5
                       },
                       {
-                        "x": 13,
+                        "x": 9,
                         "y": 53
                       }
                     ]
@@ -233,20 +316,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 9.5,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 57,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 56,
+                        "y": 57.5
                       },
                       {
-                        "x": 13,
-                        "y": 53
+                        "x": 9,
+                        "y": 57.5
                       }
                     ]
                   ]
@@ -269,19 +352,19 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 9.5,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 57,
+                        "y": 11.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 57,
+                        "y": 53.5
                       },
                       {
-                        "x": 13,
+                        "x": 9,
                         "y": 53
                       }
                     ]
@@ -296,7 +379,7 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
@@ -318,20 +401,24 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 3,
+                        "y": 40.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 9,
+                        "y": 30.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 58.5,
+                        "y": 30.5
                       },
                       {
-                        "x": 13,
-                        "y": 53
+                        "x": 60,
+                        "y": 61.5
+                      },
+                      {
+                        "x": 2.5,
+                        "y": 61.5
                       }
                     ]
                   ]
@@ -354,20 +441,24 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 3,
+                        "y": 40.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 9,
+                        "y": 30.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 58.5,
+                        "y": 30.5
                       },
                       {
-                        "x": 13,
-                        "y": 53
+                        "x": 60,
+                        "y": 61.5
+                      },
+                      {
+                        "x": 2.5,
+                        "y": 61.5
                       }
                     ]
                   ]
@@ -390,20 +481,24 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 13,
-                        "y": 12
+                        "x": 3,
+                        "y": 40.5
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 9,
+                        "y": 30.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 58.5,
+                        "y": 30.5
                       },
                       {
-                        "x": 13,
-                        "y": 53
+                        "x": 60,
+                        "y": 61.5
+                      },
+                      {
+                        "x": 2.5,
+                        "y": 61.5
                       }
                     ]
                   ]
@@ -439,20 +534,69 @@
                   "customCollisionMask": [
                     [
                       {
+                        "x": 9,
+                        "y": 10
+                      },
+                      {
+                        "x": 46.5,
+                        "y": 10
+                      },
+                      {
+                        "x": 46.5,
+                        "y": 60.5
+                      },
+                      {
                         "x": 13,
-                        "y": 12
+                        "y": 59
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ninja_dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "ninja_dead",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 20
                       },
                       {
-                        "x": 51,
-                        "y": 12
+                        "x": 49,
+                        "y": 20.5
                       },
                       {
-                        "x": 51,
-                        "y": 53
+                        "x": 48,
+                        "y": 58
                       },
                       {
-                        "x": 13,
-                        "y": 53
+                        "x": 15,
+                        "y": 58
                       }
                     ]
                   ]
@@ -585,7 +729,7 @@
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "string": "Up key - Jump\n\nDown key - Fast fall (while in the air)\n\nDown key -  Roll (while on ground)",
+      "string": "Up key - Jump\n\nDown key - Fast fall (while in the air)\n\nDown key -  Roll (while on ground)\n\nSpace - Restart",
       "font": "PressStart2P-Regular.ttf",
       "textAlignment": "left",
       "characterSize": 15,
@@ -608,7 +752,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Up key - Jump\n\nDown key - Fast fall (while in the air)\n\nDown key -  Roll (while on ground)",
+        "text": "Up key - Jump\n\nDown key - Fast fall (while in the air)\n\nDown key -  Roll (while on ground)\n\nSpace - Restart",
         "font": "PressStart2P-Regular.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
@@ -920,6 +1064,132 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "OnesPlace",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "PressStart2P-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 25,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "PressStart2P-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 25,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "HighScore",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "0",
+      "font": "PressStart2P-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 15,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "0",
+        "font": "PressStart2P-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 15,
+        "color": "0;0;0"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "highscore_text",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "HI:",
+      "font": "PressStart2P-Regular.ttf",
+      "textAlignment": "left",
+      "characterSize": 15,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "HI:",
+        "font": "PressStart2P-Regular.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 15,
+        "color": "0;0;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -951,6 +1221,15 @@
       },
       {
         "objectName": "controls"
+      },
+      {
+        "objectName": "OnesPlace"
+      },
+      {
+        "objectName": "HighScore"
+      },
+      {
+        "objectName": "highscore_text"
       }
     ]
   },
@@ -960,6 +1239,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Initialization",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1039,6 +1319,16 @@
                     "",
                     "\"Down\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "False",
+                    ""
+                  ]
                 }
               ]
             }
@@ -1067,6 +1357,24 @@
               "parameters": [
                 "Player",
                 "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "False",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -1109,6 +1417,16 @@
                   "parameters": [
                     "Player",
                     "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "False",
+                    ""
                   ]
                 }
               ]
@@ -1168,6 +1486,16 @@
                     "",
                     "\"Down\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "False",
+                    ""
+                  ]
                 }
               ]
             }
@@ -1211,6 +1539,16 @@
                     "Player",
                     "PlatformerObject"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "False",
+                    ""
+                  ]
                 }
               ]
             }
@@ -1245,6 +1583,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "RNG Loop (Obstacles)",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1272,7 +1611,7 @@
               "parameters": [
                 "obstacleRNG",
                 "=",
-                "RandomInRange(0, 2)"
+                "RandomInRange(0, 3)"
               ]
             },
             {
@@ -1316,7 +1655,7 @@
                     "",
                     "shrub_1",
                     "SpawnPoint.X()",
-                    "422",
+                    "430",
                     ""
                   ]
                 },
@@ -1327,8 +1666,8 @@
                   "parameters": [
                     "shrub_1",
                     "Resizable",
-                    "35",
-                    "67"
+                    "40",
+                    "60"
                   ]
                 }
               ]
@@ -1362,7 +1701,7 @@
                     "",
                     "shrub_2",
                     "SpawnPoint.X()",
-                    "425",
+                    "422",
                     ""
                   ]
                 },
@@ -1371,10 +1710,10 @@
                     "value": "ResizableCapability::ResizableBehavior::SetSize"
                   },
                   "parameters": [
-                    "shrub_1",
+                    "shrub_2",
                     "Resizable",
-                    "35",
-                    "67"
+                    "60",
+                    "68"
                   ]
                 }
               ]
@@ -1408,7 +1747,7 @@
                     "",
                     "shrub_3",
                     "SpawnPoint.X()",
-                    "422",
+                    "425",
                     ""
                   ]
                 },
@@ -1419,8 +1758,54 @@
                   "parameters": [
                     "shrub_3",
                     "Resizable",
-                    "35",
-                    "67"
+                    "50",
+                    "65"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "obstacleRNG",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "kunai",
+                    "SpawnPoint.X()",
+                    "RandomInRange(310, 420)",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetSize"
+                  },
+                  "parameters": [
+                    "kunai",
+                    "Resizable",
+                    "70",
+                    "60"
                   ]
                 }
               ]
@@ -1435,6 +1820,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Shrub Physics",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1450,7 +1836,721 @@
               "parameters": [
                 "Obstacles",
                 "-",
+                "Variable(objectSpeed)"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Death Triggers",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Obstacles",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "objectSpeed",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Death Sequence",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Player",
+                "Animation",
+                "=",
+                "\"ninja_dead\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::PlatformerObjectBehavior::AbortJump"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxFallingSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "scrollSpeed",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Restart Sequence",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "restart",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "restart",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::MaxFallingSpeed"
+              },
+              "parameters": [
+                "Player",
+                "PlatformerObject",
+                "=",
+                "950",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Obstacles",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "objectSpeed",
+                "=",
                 "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "OnesPlace",
+                "=",
+                "749"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "scrollSpeed",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "restart",
+                "False",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Scoring",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "OnesPlace",
+                "Text",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "RepeatEveryXSeconds::Repeat"
+                  },
+                  "parameters": [
+                    "",
+                    "score",
+                    "0.08",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "score",
+                ">",
+                "9"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "=",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "OnesPlace",
+                "-",
+                "22"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "score",
+                ">",
+                "99"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "=",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "OnesPlace",
+                "-",
+                "22"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "score",
+                ">",
+                "999"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "=",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "OnesPlace",
+                "-",
+                "22"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "score",
+                ">",
+                "9999"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isDead",
+                    "=",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "OnesPlace",
+                "-",
+                "22"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "score",
+                ">=",
+                "Variable(speedUp)"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "speedUp",
+                "+",
+                "100"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "objectSpeed",
+                    "!=",
+                    "17"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "objectSpeed",
+                    "+",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "High Score",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isDead",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "score",
+                    ">",
+                    "Variable(highScore)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "highScore",
+                "=",
+                "score"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "HighScore",
+                "Text",
+                "=",
+                "score"
               ]
             }
           ]
